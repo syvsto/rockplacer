@@ -4,9 +4,6 @@ use std::io::prelude::*;
 use image::{ImageBuffer, imageops::contrast, Luma};
 use serde::Serialize;
 
-extern crate image;
-extern crate rand;
-
 mod kmeans;
 
 const ITERATIONS: i32 = 3;
@@ -14,7 +11,6 @@ const ITERATIONS: i32 = 3;
 /// x0 x1 x2
 /// x7    x3
 /// x6 x5 x4
-
 #[derive(Debug, Serialize)]
 struct Bounds {
     x0: (usize, usize),
